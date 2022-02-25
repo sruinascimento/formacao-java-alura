@@ -33,6 +33,31 @@ public class Laco {
 
         System.err.println("Somatorio: " + soma);
 
+        int [][] matriz = {{10, 60}, {30, 12}};
+        System.out.println(matriz.length);
+    
+        for (int i = 0; i < 2; i++){
+            for (int j = 0; j < 2; j++){
+                System.out.println(matriz[i][j]);   
+            }
+            System.out.println();
+        }
+
+
+        System.out.println("**** Triangulo de números ****");
+        for (int linha = 0; linha < 10; linha++) {
+            for (int coluna = 0; coluna < 10; coluna++) {
+                if (coluna > linha) break;
+                System.out.print(coluna+1);
+            }
+            System.out.println();
+        }
+
+        System.out.println("Múltiplos de 3");
+        for (int linha = 1; linha < 101; linha++) {
+            if (linha % 3 == 0) System.out.println(linha);
+        }
+
     }
     
 }
