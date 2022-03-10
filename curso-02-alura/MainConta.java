@@ -1,12 +1,12 @@
 public class MainConta {
     public static void main(String[] args) {
-        Conta conta1 = new Conta(123, 5551, "Rui");
+        Conta conta1 = new Conta(123, 5551, new Cliente("Rui", "091234237894", "Engenheiro de Computação") );
         //Conta conta2 = conta1;
-        conta1.setSaldo(1500);
+    
         //System.out.println(conta1.getToString());
         //System.out.println(conta2.getToString());
 
-        Conta conta2 = new Conta(124, 5552, "Nara");
+        Conta conta2 = new Conta(124, 5552, new Cliente("Nara", "123714616472", "Bióloga") );
         //conta1.depositar(124);
         //String resultadoDoDeposito =  conta2.depositar(124)? "Deposito realizado com sucesso": "Falha ao realizar deposito" ;
         //System.out.println(resultadoDoDeposito);
@@ -20,5 +20,6 @@ public class MainConta {
 
         System.out.println(conta1.getToString());
         System.out.println(conta2.getToString());
+        System.out.println(Conta.getTotalDeContas());
     }
 }
