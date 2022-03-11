@@ -7,8 +7,6 @@ public class MainGerente {
         g1.setNome("Rui");
         g1.setSalario(5000);
 
-        Funcionario f1 = new Funcionario();
-        f1.setSalario(1000);
 
         EditorDeVideo ev1 = new EditorDeVideo();
         ev1.setSalario(1000);
@@ -22,7 +20,6 @@ public class MainGerente {
 
         ControleBonificacao controle = new ControleBonificacao();
         controle.registra(g1);
-        controle.registra(f1);
         controle.registra(ev1);
 
         System.out.println(controle.getBonificacao());
