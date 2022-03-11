@@ -1,15 +1,21 @@
 public class Comprador implements Autenticavel {
     
-    private int senha;
+    private AutenticacaoUtil autenticador;
+
+
+    public Comprador() {
+        this.autenticador = new AutenticacaoUtil();
+    }
+
 
     @Override
     public void setSenha(int senha) {
-        this.senha = senha;
+        this.autenticador.setSenha(senha);
     }
 
     @Override
     public boolean autenticar(int senha) {
-        return this.senha == senha;
+        return this.autenticador.getSenha() == senha;
     }
     
 }
