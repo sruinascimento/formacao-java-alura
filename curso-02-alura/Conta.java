@@ -34,18 +34,21 @@ public class Conta {
         return true;
     }
 
-    public boolean sacar(double valorASerSacado) {
-        if (!this.temSaldo(valorASerSacado)) return false;
+    public void sacar(double valorASerSacado)throws SaldoInsuficienteException{
+        this.temSaldo(valorASerSacado);
+        
         this.saldo -= valorASerSacado;
-        return true;
     }
 
-    private boolean temSaldo(double valor) {
-        return valor <=  this.saldo;
+    private void temSaldo(double valor) throws SaldoInsuficienteException {
+        if (valor >  this.saldo) {
+            throw new SaldoInsuficienteException("Saldo: RS " + this.saldo + " Valor para operacao: RS " + valor);
+        }
     }
 
-    public boolean transferir(double valorASerTransferido, Conta contaDestino) {
-        if(!this.sacar(valorASerTransferido)) return false;     
+    public boolean transferir(double valorASerTransferido, Conta contaDestino) throws SaldoInsuficienteException {
+        this.temSaldo(valorASerTransferido);
+        this.sacar(valorASerTransferido);    
         contaDestino.depositar(valorASerTransferido);
         return true;
     }
