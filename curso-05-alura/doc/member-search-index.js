@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"br.com.ruicompany.banco.modelo","c":"Cliente","l":"Cliente()","u":"%3Cinit%3E()"},{"p":"br.com.ruicompany.banco.modelo","c":"Cliente","l":"getIdade()"}];updateSearchResults();
